@@ -1,0 +1,4 @@
+/node_modules/
+custom-elements.json
+/coverage
+/.vscode

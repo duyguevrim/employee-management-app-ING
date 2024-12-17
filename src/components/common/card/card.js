@@ -23,23 +23,21 @@ export class Card extends BaseComponent {
         <div class="header">
           <h3 class="title">${this.title}</h3>
 
-          ${this.actions?.length
-            ? html`
-                <div class="actions">
-                  ${this.actions.map(
-                    (action) => html`
-                      <button
-                        class="action-button"
-                        @click=${() => action.handler(this.data)}
-                        title=${action.label}
-                      >
-                        ${action.icon}
-                      </button>
-                    `
-                  )}
-                </div>
-              `
-            : null}
+          ${html`
+            <div class="actions">
+              ${this.actions.map(
+                (action) => html`
+                  <button
+                    class="action-button"
+                    @click=${() => action.handler(this.data)}
+                    title=${action.label}
+                  >
+                    ${action.icon}
+                  </button>
+                `
+              )}
+            </div>
+          `}
         </div>
 
         <div class="card-content">

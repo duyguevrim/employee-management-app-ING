@@ -31,8 +31,7 @@ export class DataTable extends BaseComponent {
       (item) => html`
         <tr>
           ${this.columns.map((col) => html` <td>${item[col.key]}</td> `)}
-          ${this.actions?.length &&
-          html`
+          ${html`
             <td class="actions">
               ${this.actions.map(
                 (action) => html`
@@ -58,9 +57,7 @@ export class DataTable extends BaseComponent {
         <table>
           <thead>
             <tr>
-              ${this.columns?.map(
-                (col) => html`<th>${this.t(col.label)}</th>`
-              )}
+              ${this.columns?.map((col) => html`<th>${this.t(col.label)}</th>`)}
               <th>${this.actionTitle}</th>
             </tr>
           </thead>

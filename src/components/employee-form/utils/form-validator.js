@@ -70,18 +70,10 @@ export class FormValidator {
     const today = new Date();
     const birthDate = new Date(employee.dateOfBirth);
     const employmentDate = new Date(employee.dateOfEmployment);
-    const minAge = CONFIG.VALIDATION.MIN_AGE;
 
     if (birthDate > today) {
       errors.dateOfBirth = this.t('employeeForm.validation.futureDate');
-    } else {
-      const age = Math.floor(
-        (today - birthDate) / (365.25 * 24 * 60 * 60 * 1000)
-      );
-      if (age < minAge) {
-        errors.dateOfBirth = this.t('employeeForm.validation.minAge', { minAge: minAge });
-      }
-    }
+    } 
 
     if (employmentDate > today) {
       errors.dateOfEmployment = this.t('employeeForm.validation.futureEmployment');

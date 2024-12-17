@@ -49,7 +49,6 @@ export const translations = {
       },
       validation: {
         required: '{field} is required',
-        minAge: 'Min age limit is: {minAge}',
         invalidEmail: 'Invalid email address',
         invalidPhone: 'Invalid phone number',
       },
@@ -111,7 +110,6 @@ export const translations = {
       },
       validation: {
         required: '{field} bilgisi zorunludur',
-        minAge: 'Yaş sınırı {minAge} dir.',
         invalidEmail: 'Geçersiz e-posta adresi',
         invalidPhone: 'Geçersiz telefon numarası',
       },
